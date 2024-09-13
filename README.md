@@ -32,3 +32,4 @@ def my_signal_handler(sender, instance, **kwargs):
 obj = MyModel.objects.create(name="Test")
 print("Object created")  # This will be printed after the signal handler completes
 
+In the above code, we define a Django model MyModel and a signal handler function my_signal_handler that is connected to the post_save signal of MyModel. When an instance of MyModel is created (obj = MyModel.objects.create(name="Test")), the signal is sent and the signal handler is executed synchronously. The print statement "Object created" will only execute after the object has been created and the signal handler has complete
